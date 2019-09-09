@@ -8,11 +8,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class ConexaoPostgresJDBC implements ConexaoJDBC {
+public class ConexaoProperties implements ConexaoJDBC {
 
     private Connection connection = null;
 
-    public ConexaoPostgresJDBC() throws SQLException, ClassNotFoundException {
+    public ConexaoProperties() throws SQLException, ClassNotFoundException {
 //        Class.forName("org.postgresql.Driver");
     	  Class.forName("net.sourceforge.jtds.jdbc.Driver");
 
@@ -41,7 +41,7 @@ public class ConexaoPostgresJDBC implements ConexaoJDBC {
             try {
                 this.connection.close();
             } catch (SQLException ex) {
-                Logger.getLogger(ConexaoPostgresJDBC.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ConexaoProperties.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -58,7 +58,7 @@ public class ConexaoPostgresJDBC implements ConexaoJDBC {
             try {
                 this.connection.rollback();
             } catch (SQLException ex) {
-                Logger.getLogger(ConexaoPostgresJDBC.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ConexaoProperties.class.getName()).log(Level.SEVERE, null, ex);
             } finally {
                 this.close();
             }
