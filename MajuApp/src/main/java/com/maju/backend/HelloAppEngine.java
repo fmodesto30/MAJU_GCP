@@ -1,4 +1,4 @@
-package com.maju;
+package com.maju.backend;
 
 import java.io.IOException;
 
