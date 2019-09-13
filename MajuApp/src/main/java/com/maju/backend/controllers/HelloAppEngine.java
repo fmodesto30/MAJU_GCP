@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.maju.business.dao.impl.TemperaturaDAOImpl;
-import com.maju.business.interfaces.ValoresMedidos;
+import com.maju.backend.business.dao.impl.TemperaturaDAOImpl;
+import com.maju.backend.business.interfaces.ValoresMedidos;
 
 @SuppressWarnings("serial")
 @WebServlet(

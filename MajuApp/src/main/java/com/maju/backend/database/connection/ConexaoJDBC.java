@@ -1,4 +1,4 @@
-package com.maju.database.connection;
+package com.maju.backend.database.connection;
 
 import java.sql.Connection;
 import java.sql.SQLException;

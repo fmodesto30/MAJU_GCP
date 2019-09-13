@@ -1,4 +1,4 @@
-package com.maju.business.interfaces;
+package com.maju.backend.business.interfaces;
 
 public class ValoresMedidos {
 	

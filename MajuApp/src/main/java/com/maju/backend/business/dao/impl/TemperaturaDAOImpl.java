@@ -1,11 +1,11 @@
-package com.maju.business.dao.impl;
+package com.maju.backend.business.dao.impl;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import com.maju.business.interfaces.ValoresMedidos;
-import com.maju.database.connection.ConexaoJDBC;
-import com.maju.database.connection.ConexaoProperties;
+import com.maju.backend.business.interfaces.ValoresMedidos;
+import com.maju.backend.database.connection.ConexaoJDBC;
+import com.maju.backend.database.connection.ConexaoProperties;
 
 public class TemperaturaDAOImpl {
 
