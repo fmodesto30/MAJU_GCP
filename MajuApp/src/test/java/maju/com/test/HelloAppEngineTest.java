@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.maju.HelloAppEngine;
+import com.maju.backend.controllers.HelloAppEngine;
 
 public class HelloAppEngineTest {
 
