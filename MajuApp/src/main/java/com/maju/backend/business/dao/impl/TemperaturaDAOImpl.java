@@ -24,8 +24,9 @@ public class TemperaturaDAOImpl {
 			sql.append("\n  ,").append("CHUVA");
 			sql.append("\n  ,").append("TEMPERATURA");
 			sql.append("\n  ,").append("UMIDADE");
+			sql.append("\n  ,").append("LOCALIZACAO");
 			sql.append("\n  ,").append("CREATE_S");
-			sql.append("\n   ) VALUES ( ?, ?, ?, ?, DATEADD(HOUR, -3, GETDATE())) ");
+			sql.append("\n   ) VALUES ( ?, ?, ?, ?, ?, DATEADD(HOUR, -3, GETDATE())) ");
 			
 	        try {
 	            PreparedStatement statement = this.conexao.getConnection().prepareStatement(sql.toString());
@@ -34,6 +35,7 @@ public class TemperaturaDAOImpl {
 	            statement.setString(2, valoresMedidos.getChuva() != null ? valoresMedidos.getChuva() : null);	            
 	            statement.setString(3, valoresMedidos.getTemperatura() != null ? valoresMedidos.getTemperatura() : null);	            
 	            statement.setString(4, valoresMedidos.getUmidade() != null ? valoresMedidos.getUmidade() : null);
+	            statement.setString(5, valoresMedidos.getLocalizacao() != null ? valoresMedidos.getLocalizacao() : null);
 	            statement.executeUpdate();
 	            this.conexao.commit();
 	            

@@ -9,24 +9,27 @@ import java.util.logging.Logger;
 
 
 public class ConexaoProperties implements ConexaoJDBC {
-
+	
+	private static final String USER = "maju";
+	private static final String PASSWORD = "Usjt2019";
+	private static final String URL = "jdbc:jtds:sqlserver://majudb.database.windows.net/MAJU_DB";
+	
     private Connection connection = null;
 
     public ConexaoProperties() throws SQLException, ClassNotFoundException {
-//        Class.forName("org.postgresql.Driver");
+  
     	  Class.forName("net.sourceforge.jtds.jdbc.Driver");
 
-          Properties properties = new Properties();
-          
+     	  Properties properties = new Properties();
+          properties.put("user", USER);
+          properties.put("password", PASSWORD);
+        	
+//        Class.forName("org.postgresql.Driver");
 //        properties.put("user", "postgres");
 //        properties.put("password", "sa");
 //        String url = "jdbc:postgresql://35.247.241.43:5432/CONSUMIA_DB";
-        
-          properties.put("user", "maju");
-          properties.put("password", "Usjt2019");
-          String url = "jdbc:jtds:sqlserver://majudb.database.windows.net/MAJU_DB";
-
-        this.connection = DriverManager.getConnection(url, properties);
+   
+        this.connection = DriverManager.getConnection(URL, properties);
         this.connection.setAutoCommit(false);
     }
 

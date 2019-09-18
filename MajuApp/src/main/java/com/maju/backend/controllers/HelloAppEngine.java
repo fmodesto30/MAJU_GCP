@@ -51,10 +51,13 @@ public class HelloAppEngine extends HttpServlet {
 				valoresMedidos.setTemperatura(split[2]);
 			if(split.length >= 4)
 				valoresMedidos.setUmidade(split[3]);
+			if(split.length >= 5)
+				valoresMedidos.setLocalizacao(split[4]);
 			
-			if(split.length < 4)
+			
+			if(split.length < 5)
 			   response.getWriter().print("Faltou um dos valores!");
-			if(split.length > 4)
+			if(split.length > 5)
 			   response.getWriter().print("Tem valores a mais!");
 			
 			this.temperaturaDAOImpl.inserir(valoresMedidos);

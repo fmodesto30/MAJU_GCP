@@ -6,6 +6,7 @@ public class ValoresMedidos {
 	private String chuva;
 	private String temperatura;
 	private String umidade;
+	private String localizacao;
 	
 	public String getUv() {
 		return uv;
@@ -31,7 +32,6 @@ public class ValoresMedidos {
 		this.temperatura = temperatura;
 	}
 	
-	
 	public String getUmidade() {
 		return umidade;
 	}
@@ -40,10 +40,21 @@ public class ValoresMedidos {
 		this.umidade = umidade;
 	}
 
+	public String getLocalizacao() {
+		return localizacao;
+	}
+
+	public void setLocalizacao(String localizacao) {
+		this.localizacao = localizacao;
+	}
+
 	@Override
 	public String toString() {
-		return "ValoresMedidos [uv=" + uv + ", chuva=" + chuva + ", temperatura=" + temperatura + ", umidade=" + umidade
-				+ "]";
+		return "ValoresMedidos [" + (uv != null ? "uv=" + uv + ", " : "")
+				+ (chuva != null ? "chuva=" + chuva + ", " : "")
+				+ (temperatura != null ? "temperatura=" + temperatura + ", " : "")
+				+ (umidade != null ? "umidade=" + umidade + ", " : "")
+				+ (localizacao != null ? "localizacao=" + localizacao : "") + "]";
 	}
 
 }
