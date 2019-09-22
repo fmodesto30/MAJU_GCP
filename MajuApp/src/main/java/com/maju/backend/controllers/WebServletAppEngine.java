@@ -12,10 +12,10 @@ import com.maju.backend.business.interfaces.ValoresMedidos;
 
 @SuppressWarnings("serial")
 @WebServlet(
-    name = "HelloAppEngine",
-    urlPatterns = {"/hello"}
+    name = "WebServletAppEngine",
+    urlPatterns = {"/rest"}
 )
-public class HelloAppEngine extends HttpServlet {
+public class WebServletAppEngine extends HttpServlet {
 
    private TemperaturaDAOImpl temperaturaDAOImpl;
 	

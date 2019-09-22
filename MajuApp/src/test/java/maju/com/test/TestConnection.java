@@ -1,4 +1,4 @@
-package com.maju.backend.database.connection;
+package maju.com.test;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
