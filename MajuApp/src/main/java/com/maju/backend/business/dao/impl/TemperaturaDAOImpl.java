@@ -6,7 +6,10 @@ import java.sql.SQLException;
 import com.maju.backend.business.interfaces.ValoresMedidos;
 import com.maju.backend.database.connection.ConexaoJDBC;
 import com.maju.backend.database.connection.ConexaoProperties;
-
+/**
+*
+* @author Felipe Mota Modesto
+*/
 public class TemperaturaDAOImpl {
 
 	private final ConexaoJDBC conexao;

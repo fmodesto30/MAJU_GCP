@@ -14,8 +14,12 @@ public class TestConnection {
 	public TestConnection() throws ClassNotFoundException{
 		
 		Class.forName("net.sourceforge.jtds.jdbc.Driver");
+		
+//      Class.forName("org.postgresql.Driver");
+//      properties.put("user", "postgres");
+//      properties.put("password", "sa");
+//      String url = "jdbc:postgresql://35.247.241.43:5432/CONSUMIA_DB";
 
-//		url = "jdbc:postgresql://localhost:5432/postgres";
 		url = "jdbc:jtds:sqlserver://majudb.database.windows.net/MAJU_DB";
 		
 		usuario = "maju";
@@ -25,7 +29,7 @@ public class TestConnection {
 		try {
 			
 			Class.forName("org.postgresql.Driver");
-			con = DriverManager.getConnection(url, usuario, senha);
+			this.con = DriverManager.getConnection(url, usuario, senha);
 			System.err.println("conexao pro !!!");
 			
 			

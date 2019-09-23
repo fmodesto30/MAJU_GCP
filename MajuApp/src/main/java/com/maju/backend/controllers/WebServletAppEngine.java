@@ -10,6 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import com.maju.backend.business.dao.impl.TemperaturaDAOImpl;
 import com.maju.backend.business.interfaces.ValoresMedidos;
 
+/**
+*
+* @author Felipe Mota Modesto
+*/
+
 @SuppressWarnings("serial")
 @WebServlet(
     name = "WebServletAppEngine",
@@ -19,20 +24,9 @@ public class WebServletAppEngine extends HttpServlet {
 
    private TemperaturaDAOImpl temperaturaDAOImpl;
 	
-  @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) 
-      throws IOException {
-
-    response.setContentType("text/plain");
-    response.setCharacterEncoding("UTF-8");
-    response.getWriter().print("Maju Application Release Novo 2.0\r\n");
-
-  }
-
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 		
-	
 		ValoresMedidos valoresMedidos = new ValoresMedidos();
 		String values = request.getParameter("values");
 		
@@ -55,10 +49,14 @@ public class WebServletAppEngine extends HttpServlet {
 				valoresMedidos.setLocalizacao(split[4]);
 			
 			
-			if(split.length < 5)
+			if(split.length < 5) {
 			   response.getWriter().print("Faltou um dos valores!");
-			if(split.length > 5)
+			   return;
+			}
+			if(split.length > 5) {
 			   response.getWriter().print("Tem valores a mais!");
+			   return;
+			}
 			
 			this.temperaturaDAOImpl.inserir(valoresMedidos);
 			response.getWriter().print("\nValor salvo no Banco: " + values);
@@ -68,5 +66,15 @@ public class WebServletAppEngine extends HttpServlet {
 		}
 
 	}
+	
+	  @Override
+	  public void doGet(HttpServletRequest request, HttpServletResponse response) 
+	      throws IOException {
+
+	    response.setContentType("text/plain");
+	    response.setCharacterEncoding("UTF-8");
+	    response.getWriter().print("Maju Application Release Novo 2.0\r\n");
+
+	  }
 	
 }

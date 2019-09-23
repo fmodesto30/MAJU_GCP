@@ -7,7 +7,10 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+/**
+*
+* @author Felipe Mota Modesto
+*/
 public class ConexaoProperties implements ConexaoJDBC {
 	
 	private static final String USER = "maju";
@@ -24,11 +27,6 @@ public class ConexaoProperties implements ConexaoJDBC {
           properties.put("user", USER);
           properties.put("password", PASSWORD);
         	
-//        Class.forName("org.postgresql.Driver");
-//        properties.put("user", "postgres");
-//        properties.put("password", "sa");
-//        String url = "jdbc:postgresql://35.247.241.43:5432/CONSUMIA_DB";
-   
         this.connection = DriverManager.getConnection(URL, properties);
         this.connection.setAutoCommit(false);
     }
