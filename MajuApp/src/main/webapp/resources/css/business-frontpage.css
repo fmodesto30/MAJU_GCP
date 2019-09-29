@@ -10,9 +10,16 @@ body {
 .imagemDeFundo{
     background: url('../imagens/familia.jpg') no-repeat; 
     width: auto;
-    height: 150px;
+    height: 100px;
 }
 
+.imagemDeFundoLarge{
+    background: url('../imagens/familia.jpg') no-repeat; 
+    width: auto;
+    height: 500px;
+}
+
+
 .bg-clean {
-  background-image: linear-gradient(to right, rgba(17, 146, 219, 0.8), rgba(0, 179, 243, 0.62));
+  background-image: linear-gradient(to right, rgb(7, 84, 232), rgba(240, 177, 29, 0.62));
 }
