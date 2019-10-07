@@ -578,50 +578,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
  margin-left:-12px;
  border-right-color:#fff
 }
-@font-face {
- font-family:Roboto-Regular;
- font-style:normal;
- font-weight:400;
- font-display:fallback;
- src:url(../fonts/Roboto-Light.eot),
- url(../fonts/Roboto-Light.eot?#iefix) format("embedded-opentype"),
- url(../fonts/Roboto-Light.woff) format("woff"),
- url(../fonts/Roboto-Light.ttf) format("truetype"),
- url(../fonts/Roboto-Light.svg#svgFontName) format("svg")
-}
-@font-face {
- font-family:Roboto-Bold;
- font-style:normal;
- font-weight:400;
- font-display:fallback;
- src:url(../fonts/Roboto-Bold.eot),
- url(../fonts/Roboto-Bold.eot?#iefix) format("embedded-opentype"),
- url(../fonts/Roboto-Bold.woff) format("woff"),
- url(../fonts/Roboto-Bold.ttf) format("truetype"),
- url(../fonts/Roboto-Bold.svg#svgFontName) format("svg")
-}
-@font-face {
- font-family:Roboto-Regular;
- font-style:normal;
- font-weight:400;
- font-display:fallback;
- src:url(../fonts/Roboto-Regular.eot),
- url(../fonts/Roboto-Regular.eot?#iefix) format("embedded-opentype"),
- url(../fonts/Roboto-Regular.woff) format("woff"),
- url(../fonts/Roboto-Regular.ttf) format("truetype"),
- url(../fonts/Roboto-Regular.svg#svgFontName) format("svg")
-}
-@font-face {
- font-family:Helvetica-Light;
- font-style:normal;
- font-weight:400;
- font-display:fallback;
- src:url(../fonts/helvetica-light.eot),
- url(../fonts/helvetica-light.eot?#iefix) format("embedded-opentype"),
- url(../fonts/helvetica-light.woff) format("woff"),
- url(../fonts/helvetica-light.ttf) format("truetype"),
- url(../fonts/helvetica-light.svg#svgFontName) format("svg")
-}
 .first-featured-news {
  display:flex;
  height:330px
@@ -692,7 +648,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .current-weather {
  background:#fff;
  color:#fff;
- height:330px;
+ height:380px;
  padding:20px;
  position:relative
 }
