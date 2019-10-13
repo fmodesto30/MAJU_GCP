@@ -1,20 +1,175 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-  <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>Hello App Engine</title>
-  </head>
 
-  <body>
-    <h1>Hello App Engine!</h1>
+<head>
 
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href='/hello'>The servlet</a></td>
-      </tr>
-    </table>
-  </body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="application/xhtml+xml; width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Maju</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="resources/css/business-frontpage.css" rel="stylesheet">
+  <link href="resources/vendor/bootstrap/css/commonstyle.bundle.min.css" rel="stylesheet">
+  <link href="resources/vendor/bootstrap/css/indexstyle.bundle.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="https://fonticons-free-fonticons.netdna-ssl.com/kits/349cfdf6/publications/97628/woff2.css" rel="stylesheet"/>
+
+</head>
+
+<body ng-app= "HelpApp">
+
+  <div ng-controller="ChamadoController as controller">
+     {{1 + 2}}
+     
+     Olá {{controller.usuario}}
+     
+ </div>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-clean fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html" ><img src="resources/imagens/maju.png" alt="some text" width=85 height=25 /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../About.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5 imagemDeFundo" >
+    <div class="container-fluid h-100">
+      <div class="row-fluid h-100 align-items-center">
+        <div class="col-lg-12">
+<!--           <h1 class="display-4 text-white mt-5 mb-2" style="color: #ff8e0fe8 !important;">Business Name or Tagline</h1> -->
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container" style="height: 200%">
+  
+  	<div class="row">
+		  <div class="col-lg-4">
+			  <div class="base-card current-weather">
+					<span class=" -uppercase -bold -font-small background-good">
+						<li style="font-size: 12px;">Tempo agora em Parque da Mooca</li>
+					</span>
+					
+					<span style="height: 100px;" class="-gray -bold -font-small background">
+						<li style="font-size: 12px; color: darkslategray;"><b>Não há necessidade de proteção, mas procure uma sombra nas horas próximas ao meio-dia.</b></li>
+					</span>
+					
+					<a class="locale -blue -bold _margin-t-10 actControlModal" data-modal="geolocationSearch"></a>
+					<div class="temperature _flex _align-center _margin-t-20">
+					<img id="momento-icone" src="resources/imagens/feliz.png" alt="Ícone de temperatura atual" width="100" height="90">
+					<div>
+					<h3 class="value -bold -gray" id="momento-temperatura">23°</h3>
+					</div>
+					</div>
+					<div class="temperature _flex _align-center" >
+						<span class="predictions"><i class="fa fa-tint"></i>&nbsp;<b>Umidade</b><br><span id="momento-umidade">47%</span></span>
+						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Baixo</span></span>
+						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">Não&nbsp;</span></span>
+					</div>
+					<span class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+				</div>
+		  	</div>
+		  	
+		  	<div class="col-lg-4">
+			  <div class="base-card current-weather" data-current-weather="">
+					<span class="-uppercase -bold -font-small background-bad">
+						<li style="font-size: 12px;">Tempo agora em Parque Trianon</li>
+					</span>
+					
+					<span style="height: 100px;" class="-gray -bold -font-small background">
+						<li style="font-size: 12px; color: darkslategray;"><b>Há necessidade de proteção intensa, evite se espor no sol nas horas próximas ao meio-dia. Camiseta, filtro solar, óculos e beba bastante água.</b></li>
+					</span>
+					
+					<a class="locale -blue -bold _margin-t-10 actControlModal" data-modal="geolocationSearch"></a>
+					<div class="temperature _flex _align-center _margin-t-20">
+					<img id="momento-icone" src="resources/imagens/suando.png" alt="Ícone de temperatura atual" width="100" height="100">
+					<div>
+						<h3 class="value -bold -gray" id="momento-temperatura">36°</h3>
+					</div>
+					</div>
+					<div class="temperature _flex _align-center" >
+						<span class="predictions"><i class="fa fa-tint"></i>&nbsp;<b>Umidade</b><br><span id="momento-umidade">37%</span></span>
+						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Extremo</span></span>
+						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">Não&nbsp;</span></span>
+					</div>
+					<span class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+				</div>
+		  	</div>
+		  	
+		  	<div class="col-lg-4">
+			  <div class="base-card current-weather" data-current-weather="">
+					<span class="-uppercase -bold -font-small background-medium">
+						<li style="font-size: 12px;">Tempo agora em Parque Ibirapuera</li>
+					</span>
+					
+					<span style="height: 100px;" class="-gray -bold -font-small background">
+						<li style="font-size: 12px; color: darkslategray;"><b>Há necessidade de proteção intensa, vista uma camiseta, aplique filtro solar e coloque um chapéu.</b></li>
+					</span>
+					
+					<a class="locale -blue -bold _margin-t-10 actControlModal" data-modal="geolocationSearch"></a>
+					<div class="temperature _flex _align-center _margin-t-20">
+					<img id="momento-icone" src="resources/imagens/preocupado.png" alt="Ícone de temperatura atual" width="100" height="100">
+					<div>
+						<h3 class="value -bold -gray" id="momento-temperatura">29°</h3>
+					</div>
+					</div>
+					<div class="temperature _flex _align-center" >
+						<span class="predictions"><i class="fa fa-tint"></i>&nbsp;<b>Umidade</b><br><span id="momento-umidade">43%</span></span>
+						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Moderado</span></span>
+						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">Não&nbsp;</span></span>
+					</div>
+					<span class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+				</div>
+		  	</div>
+		  	
+		  	
+		  </div>
+  </div>
+
+<br>
+
+  <footer class="py-4 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Maju Application 2019</p>
+    </div>
+  </footer>
+  
+
+  <script src="resources/vendor/jquery/jquery.min.js"></script>
+  <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="resources/angular/angular.js"></script>
+  <script src="resources/angular/controllers/help.js"></script>
+
+</body>
+
 </html>
+
