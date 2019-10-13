@@ -1,6 +1,7 @@
 package com.maju.backend.business.dao.impl;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import com.maju.backend.business.interfaces.ValoresMedidos;
@@ -48,6 +49,43 @@ public class TemperaturaDAOImpl {
 	            this.conexao.rollback();
 	        }
 	        return id;
+	    }
+	    
+	    public ValoresMedidos findAll() throws SQLException, ClassNotFoundException {
+	    	
+	    	ValoresMedidos valoresMedidos = new ValoresMedidos();
+	    	
+	    	StringBuffer sql = new StringBuffer();
+	    	sql.append("SELECT TOP 1 * FROM DB_CLIMA ORDER BY CREATE_S DESC");
+
+	        try {
+	        	
+	        	PreparedStatement statement = this.conexao.getConnection().prepareStatement(sql.toString());
+	            ResultSet rs = statement.executeQuery();
+	            
+	            while (rs.next()) {
+	            	parser(rs, valoresMedidos);
+	            }
+
+	        } catch (SQLException e) {
+	            throw e;
+	        }
+
+	        return valoresMedidos;
+	    }
+	    
+	    
+	    private ValoresMedidos parser(ResultSet resultSet, ValoresMedidos valoresMedidos) throws SQLException {
+	    	
+	    	valoresMedidos.setId(resultSet.getInt("ID"));
+	    	valoresMedidos.setUv(resultSet.getString("UV"));
+	    	valoresMedidos.setChuva(resultSet.getString("CHUVA"));
+	    	valoresMedidos.setTemperatura(resultSet.getString("TEMPERATURA"));	
+	    	valoresMedidos.setUmidade(resultSet.getString("UMIDADE"));	
+	    	valoresMedidos.setLocalizacao(resultSet.getString("LOCALIZACAO"));
+	    	valoresMedidos.setCreateS(resultSet.getTimestamp("CREATE_S"));	
+
+	        return valoresMedidos;
 	    }
 	    
 }

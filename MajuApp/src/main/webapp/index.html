@@ -7,6 +7,7 @@
   <meta name="viewport" content="application/xhtml+xml; width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Maju</title>
 
@@ -22,7 +23,14 @@
 
 </head>
 
-<body>
+<body ng-app= "HelpApp">
+
+  <div ng-controller="ChamadoController as controller">
+     {{1 + 2}}
+     
+     Olá {{controller.usuario}}
+     
+ </div>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-clean fixed-top">
@@ -46,6 +54,9 @@
       </div>
     </div>
   </nav>
+  
+  
+  
 
   <!-- Header -->
   <header class="bg-primary py-5 mb-5 imagemDeFundo" >
@@ -152,8 +163,11 @@
     </div>
   </footer>
   
+
   <script src="resources/vendor/jquery/jquery.min.js"></script>
   <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="resources/angular/angular.js"></script>
+  <script src="resources/angular/controllers/help.js"></script>
 
 </body>
 

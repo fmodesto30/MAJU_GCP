@@ -1,17 +1,32 @@
 package com.maju.backend.business.interfaces;
 
+import java.util.Date;
+
 public class ValoresMedidos {
 	
+	private Integer id;
 	private String uv;
 	private String chuva;
 	private String temperatura;
 	private String umidade;
 	private String localizacao;
+	private Date createS;
+	
+	//	Getters and Setters
+	
 	
 	public String getUv() {
 		return uv;
 	}
-	
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public void setUv(String uv) {
 		this.uv = uv;
 	}
@@ -48,13 +63,22 @@ public class ValoresMedidos {
 		this.localizacao = localizacao;
 	}
 
+	public Date getCreateS() {
+		return createS;
+	}
+
+	public void setCreateS(Date createS) {
+		this.createS = createS;
+	}
+
 	@Override
 	public String toString() {
-		return "ValoresMedidos [" + (uv != null ? "uv=" + uv + ", " : "")
+		return "ValoresMedidos [" + (id != null ? "id=" + id + ", " : "") + (uv != null ? "uv=" + uv + ", " : "")
 				+ (chuva != null ? "chuva=" + chuva + ", " : "")
 				+ (temperatura != null ? "temperatura=" + temperatura + ", " : "")
 				+ (umidade != null ? "umidade=" + umidade + ", " : "")
-				+ (localizacao != null ? "localizacao=" + localizacao : "") + "]";
+				+ (localizacao != null ? "localizacao=" + localizacao + ", " : "")
+				+ (createS != null ? "createS=" + createS : "") + "]";
 	}
 
 }
