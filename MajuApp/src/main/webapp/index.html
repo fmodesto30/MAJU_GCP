@@ -2,13 +2,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 	<script>
-		function exibirIframe()
-		{
-// 		    document.getElementById("iframe").style.display = "block";
-		$(document).ready(function () {
-       	 window.open("https://app.powerbi.com/view?r=eyJrIjoiMDIwYmI1MTMtMjhiMC00NWViLTk2YTQtNTZhYjQ4Zjk2OWJiIiwidCI6ImViZjMwNjI2LTdjNjEtNGQ0MC1hMGMxLTczNmM4OTQwYjQzZiJ9", "theFrame");
-		});
+		function exibirIframe(){
+			$(document).ready(function () {
+	       	 	window.open("https://app.powerbi.com/view?r=eyJrIjoiMDIwYmI1MTMtMjhiMC00NWViLTk2YTQtNTZhYjQ4Zjk2OWJiIiwidCI6ImViZjMwNjI2LTdjNjEtNGQ0MC1hMGMxLTczNmM4OTQwYjQzZiJ9", "theFrame");
+			  });
 		}
+		
+		function exibirIframeMooca(){
+			$(document).ready(function () {
+	       	 	window.open("https://www.google.com/maps/place/Parque+da+Mooca,+S%C3%A3o+Paulo+-+SP/data=!4m2!3m1!1s0x94ce5c000a550adb:0x4f69901e812cacf4?sa=X&ved=2ahUKEwj67vyUu53lAhVPDrkGHZ49DkcQ8gEwAHoECAoQAQ", "theFrame");
+			  });
+		}
+		
+		function exibirIframeIbirapuera(){
+			$(document).ready(function () {
+	       	 	window.open("https://www.google.com/maps/place/Parque+Ibirapuera/@-23.587426,-46.6624133,16z/data=!4m5!3m4!1s0x94ce59f1069d11d1:0xcb936109af9ce541!8m2!3d-23.5874162!4d-46.6576336", "theFrame");
+			  });
+		}
+		
+		function exibirIframeDante(){
+			$(document).ready(function () {
+	       	 	window.open("https://www.google.com/maps?client=firefox-b-d&q=dante+alighieri&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjEkZOavJ3lAhUOHbkGHf2bA94Q_AUIEigC", "theFrame");
+			  });
+		}
+		
+		
 	</script>
 
 <head>
@@ -79,8 +97,8 @@
   	<div class="row">
 		  <div class="col-lg-4">
 			  <div class="base-card current-weather">
-					<span class=" -uppercase -bold -font-small background-good">
-						<li style="font-size: 12px;">Tempo agora em Parque da Mooca</li>
+					<span class=" -uppercase -bold -font-small background-good" onclick="exibirIframeDante();">
+						<li style="font-size: 12px;">Tempo agora em Jardim Dante</li>
 					</span>
 					
 					<span style="height: 100px;" class="-gray -bold -font-small background">
@@ -112,8 +130,8 @@
 		  	
 		  	<div class="col-lg-4">
 			  <div class="base-card current-weather" data-current-weather="">
-					<span class="-uppercase -bold -font-small background-bad">
-						<li style="font-size: 12px;">Tempo agora em Parque Trianon</li>
+					<span class="-uppercase -bold -font-small background-bad" onclick="exibirIframeMooca();">
+						<li style="font-size: 12px;">Tempo agora em Parque Mooca</li>
 					</span>
 					
 					<span style="height: 100px;" class="-gray -bold -font-small background">
@@ -145,7 +163,7 @@
 		  	
 		  	<div class="col-lg-4">
 			  <div class="base-card current-weather" data-current-weather="">
-					<span class="-uppercase -bold -font-small background-medium">
+					<span class="-uppercase -bold -font-small background-medium" onclick="exibirIframeIbirapuera();">
 						<li style="font-size: 12px;">Tempo agora em Parque Ibirapuera</li>
 					</span>
 					
