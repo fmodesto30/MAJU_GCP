@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
+	<script>
+		function exibirIframe()
+		{
+// 		    document.getElementById("iframe").style.display = "block";
+		$(document).ready(function () {
+       	 window.open("https://app.powerbi.com/view?r=eyJrIjoiMDIwYmI1MTMtMjhiMC00NWViLTk2YTQtNTZhYjQ4Zjk2OWJiIiwidCI6ImViZjMwNjI2LTdjNjEtNGQ0MC1hMGMxLTczNmM4OTQwYjQzZiJ9", "theFrame");
+		});
+		}
+	</script>
+
 <head>
 
   <meta charset="utf-8">
@@ -49,7 +59,9 @@
       </div>
     </div>
   </nav>
-
+  
+<!--   	<iframe class="iframe" id="iframe" width="800" height="600" src="https://app.powerbi.com/view?r=eyJrIjoiMDIwYmI1MTMtMjhiMC00NWViLTk2YTQtNTZhYjQ4Zjk2OWJiIiwidCI6ImViZjMwNjI2LTdjNjEtNGQ0MC1hMGMxLTczNmM4OTQwYjQzZiJ9" frameborder="0" allowFullScreen="true"></iframe> -->
+  
   <!-- Header -->
   <header class="bg-primary py-5 mb-5 imagemDeFundo" >
     <div class="container-fluid h-100">
@@ -87,7 +99,12 @@
 						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Baixo</span></span>
 						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">Não&nbsp;</span></span>
 					</div>
-					<span class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+	
+				<div class="row">
+					<button style="margin-left: 25px;" type="button" class="btn btn-primary"  onclick="exibirIframe();" ><i class="fa fa-line-chart"></i>&nbsp;Outros Dias</button>					
+					<span style="margin-left: auto;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+				</div>
+					
 				</div>
 		  	</div>
 		  	
@@ -115,7 +132,12 @@
 						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Extremo</span></span>
 						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">Não&nbsp;</span></span>
 					</div>
-					<span class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+				
+ 				<div class="row">
+					<button style="margin-left: 25px;" type="button" class="btn btn-primary"  onclick="exibirIframe();" ><i class="fa fa-line-chart"></i>&nbsp;Outros Dias</button>					
+					<span style="margin-left: auto;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+				</div>
+					
 				</div>
 		  	</div>
 		  	
@@ -143,7 +165,12 @@
 						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Moderado</span></span>
 						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">Não&nbsp;</span></span>
 					</div>
-					<span class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+					
+				<div class="row">
+					<button style="margin-left: 25px;" type="button" class="btn btn-primary"  onclick="exibirIframe();" ><i class="fa fa-line-chart"></i>&nbsp;Outros Dias</button>					
+					<span style="margin-left: auto;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+				</div>
+					
 				</div>
 		  	</div>
 		  	
@@ -171,6 +198,8 @@
   <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="resources/angular/angular.js"></script>
   <script src="resources/angular/controller/help.js"></script>
+  
+
 
 </body>
 

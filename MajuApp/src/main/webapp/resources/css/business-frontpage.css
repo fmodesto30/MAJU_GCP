@@ -68,3 +68,6 @@ body {
 min-height: auto !important;
 }
 
+.iframe {
+    display: none;
+}
