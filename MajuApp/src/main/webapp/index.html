@@ -23,14 +23,12 @@
 
 </head>
 
-<body ng-app= "HelpApp">
+<body class="my-element" ng-app= "HelpApp">
 
-  <div ng-controller="ChamadoController as controller">
-     {{1 + 2}}
-     
-     Olá {{controller.usuario}}
-     
- </div>
+<!-- 	  <div ng-controller="ChamadoController as controller"> -->
+<!-- 	     {{1 + 2}} -->
+<!-- 	     Olá {{controller.usuario}} -->
+<!-- 	 </div> -->
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-clean fixed-top">
@@ -42,21 +40,15 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../About.html">About</a>
+            <a class="nav-link" href="../About.html">Sobre o Maju</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#">Serviços</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  
-  
-  
 
   <!-- Header -->
   <header class="bg-primary py-5 mb-5 imagemDeFundo" >
@@ -70,7 +62,7 @@
   </header>
 
   <!-- Page Content -->
-  <div class="container" style="height: 200%">
+  <div class="container">
   
   	<div class="row">
 		  <div class="col-lg-4">
@@ -99,6 +91,8 @@
 				</div>
 		  	</div>
 		  	
+		  	</br>
+		  	
 		  	<div class="col-lg-4">
 			  <div class="base-card current-weather" data-current-weather="">
 					<span class="-uppercase -bold -font-small background-bad">
@@ -124,6 +118,8 @@
 					<span class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
 				</div>
 		  	</div>
+		  	
+		  	</br>
 		  	
 		  	<div class="col-lg-4">
 			  <div class="base-card current-weather" data-current-weather="">
@@ -157,7 +153,14 @@
 
 <br>
 
-  <footer class="py-4 bg-dark">
+  <footer class="py-4 bg-dark d-sm-none d-md-block d-none d-sm-block">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Maju Application 2019</p>
+    </div>
+  </footer>
+  
+  
+  <footer style="margin-top: 350%;" class="py-4 bg-dark d-block d-sm-none"  >
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Maju Application 2019</p>
     </div>
@@ -167,7 +170,7 @@
   <script src="resources/vendor/jquery/jquery.min.js"></script>
   <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="resources/angular/angular.js"></script>
-  <script src="resources/angular/controllers/help.js"></script>
+  <script src="resources/angular/controller/help.js"></script>
 
 </body>
 
