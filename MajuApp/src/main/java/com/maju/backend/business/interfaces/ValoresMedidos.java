@@ -10,6 +10,8 @@ public class ValoresMedidos {
 	private String temperatura;
 	private String umidade;
 	private String localizacao;
+	private String data;
+	private String hora;
 	private Date createS;
 	
 	//	Getters and Setters
@@ -71,6 +73,22 @@ public class ValoresMedidos {
 		this.createS = createS;
 	}
 
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
+	}
+
 	@Override
 	public String toString() {
 		return "ValoresMedidos [" + (id != null ? "id=" + id + ", " : "") + (uv != null ? "uv=" + uv + ", " : "")
@@ -78,6 +96,7 @@ public class ValoresMedidos {
 				+ (temperatura != null ? "temperatura=" + temperatura + ", " : "")
 				+ (umidade != null ? "umidade=" + umidade + ", " : "")
 				+ (localizacao != null ? "localizacao=" + localizacao + ", " : "")
+				+ (data != null ? "data=" + data + ", " : "") + (hora != null ? "hora=" + hora + ", " : "")
 				+ (createS != null ? "createS=" + createS : "") + "]";
 	}
 

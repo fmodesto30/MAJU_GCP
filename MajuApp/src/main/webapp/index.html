@@ -53,10 +53,9 @@
 
 <body class="my-element" ng-app= "HelpApp">
 
-<!-- 	  <div ng-controller="ChamadoController as controller"> -->
+	  <div ng-controller="ChamadoController as controller">
 <!-- 	     {{1 + 2}} -->
 <!-- 	     Olá {{controller.usuario}} -->
-<!-- 	 </div> -->
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-clean fixed-top">
@@ -97,7 +96,7 @@
   	<div class="row">
 		  <div class="col-lg-4">
 			  <div class="base-card current-weather">
-					<span class=" -uppercase -bold -font-small background-good" onclick="exibirIframeDante();">
+					<span class=" -uppercase -bold -font-small background-good col-12" onclick="exibirIframeDante();">
 						<li style="font-size: 12px;">Tempo agora em Jardim Dante</li>
 					</span>
 					
@@ -109,18 +108,18 @@
 					<div class="temperature _flex _align-center _margin-t-20">
 					<img id="momento-icone" src="resources/imagens/feliz.png" alt="Ícone de temperatura atual" width="100" height="90">
 					<div>
-					<h3 class="value -bold -gray" id="momento-temperatura">23°</h3>
+					<h3 class="value -bold -gray" id="momento-temperatura">{{temperatura}}°</h3>
 					</div>
 					</div>
 					<div class="temperature _flex _align-center" >
-						<span class="predictions"><i class="fa fa-tint"></i>&nbsp;<b>Umidade</b><br><span id="momento-umidade">47%</span></span>
-						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Baixo</span></span>
-						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">Não&nbsp;</span></span>
+						<span class="predictions"><i class="fa fa-tint"></i>&nbsp;<b>Umidade</b><br><span id="momento-umidade">{{umidade}}%</span></span>
+						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">{{uv}}</span></span>
+						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">{{chuva}}&nbsp;</span></span>
 					</div>
 	
 				<div class="row">
 					<button style="margin-left: 25px;" type="button" class="btn btn-primary"  onclick="exibirIframe();" ><i class="fa fa-line-chart"></i>&nbsp;Outros Dias</button>					
-					<span style="margin-left: auto;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+					<span style="margin-left: 60px;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado <br>{{data}} às {{hora}}h</span>
 				</div>
 					
 				</div>
@@ -130,7 +129,7 @@
 		  	
 		  	<div class="col-lg-4">
 			  <div class="base-card current-weather" data-current-weather="">
-					<span class="-uppercase -bold -font-small background-bad" onclick="exibirIframeMooca();">
+					<span class="-uppercase -bold -font-small background-bad col-12" onclick="exibirIframeMooca();">
 						<li style="font-size: 12px;">Tempo agora em Parque Mooca</li>
 					</span>
 					
@@ -153,7 +152,7 @@
 				
  				<div class="row">
 					<button style="margin-left: 25px;" type="button" class="btn btn-primary"  onclick="exibirIframe();" ><i class="fa fa-line-chart"></i>&nbsp;Outros Dias</button>					
-					<span style="margin-left: auto;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+					<span style="margin-left: 60px;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado <br>{{data}} às {{hora}}h</span>
 				</div>
 					
 				</div>
@@ -163,7 +162,7 @@
 		  	
 		  	<div class="col-lg-4">
 			  <div class="base-card current-weather" data-current-weather="">
-					<span class="-uppercase -bold -font-small background-medium" onclick="exibirIframeIbirapuera();">
+					<span class="-uppercase -bold -font-small background-medium col-12" onclick="exibirIframeIbirapuera();">
 						<li style="font-size: 12px;">Tempo agora em Parque Ibirapuera</li>
 					</span>
 					
@@ -186,7 +185,7 @@
 					
 				<div class="row">
 					<button style="margin-left: 25px;" type="button" class="btn btn-primary"  onclick="exibirIframe();" ><i class="fa fa-line-chart"></i>&nbsp;Outros Dias</button>					
-					<span style="margin-left: auto;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado às 23:00h</span>
+					<span style="margin-left: 60px;" class="-font-small -gray _right _block _margin-t-5" id="momento-atualizacao">Atualizado <br>{{data}} às {{hora}}h</span>
 				</div>
 					
 				</div>
@@ -197,6 +196,8 @@
   </div>
 
 <br>
+
+</div>
 
   <footer class="py-4 bg-dark d-sm-none d-md-block d-none d-sm-block">
     <div class="container">
