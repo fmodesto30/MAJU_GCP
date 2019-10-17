@@ -1,5 +1,5 @@
 angular.module("HelpApp", [])
-		.value('urlBase', 'http://localhost:8080/restFull/park')
+		.value('urlBase', 'https://app-maju.appspot.com/restFull/park')
         .controller("ChamadoController", function ($scope, $http, urlBase) {
         	
             var self = this;
