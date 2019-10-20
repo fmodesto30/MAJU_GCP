@@ -48,6 +48,7 @@ public class HelloController {
     	valoresMedidos.setUmidade(valoresMedidos.getUmidade().substring(0, 2));
     	valoresMedidos.setTemperatura(valoresMedidos.getTemperatura().substring(0, 2));
     	valoresMedidos.setChuva(valoresMedidos.getChuva().equals("Nao_Chove") ? "Não" : "Sim");
+    	valoresMedidos.setLocalizacao(valoresMedidos.getLocalizacao().replace("_", " "));
     	
     	
     	String data = new SimpleDateFormat("dd/MM/yyyy").format(valoresMedidos.getCreateS());
@@ -69,4 +70,5 @@ public class HelloController {
     	System.err.println(valoresMedidos.toString());
     	 return Response.ok(valoresMedidos, MediaType.APPLICATION_JSON).build();
     }
+    
 }
