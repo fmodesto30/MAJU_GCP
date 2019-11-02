@@ -13,6 +13,7 @@ public class ValoresMedidos {
 	private String data;
 	private String hora;
 	private Date createS;
+	private String uvNumber;
 	
 	//	Getters and Setters
 	
@@ -87,6 +88,14 @@ public class ValoresMedidos {
 
 	public void setHora(String hora) {
 		this.hora = hora;
+	}
+
+	public String getUvNumber() {
+		return uvNumber;
+	}
+
+	public void setUvNumber(String uvNumber) {
+		this.uvNumber = uvNumber;
 	}
 
 	@Override

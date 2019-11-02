@@ -48,6 +48,7 @@
   <link href="resources/vendor/bootstrap/css/indexstyle.bundle.min.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   <link href="https://fonticons-free-fonticons.netdna-ssl.com/kits/349cfdf6/publications/97628/woff2.css" rel="stylesheet"/>
+  
 
 </head>
 
@@ -60,7 +61,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-clean fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="../index.html" ><img src="resources/imagens/maju.png" alt="some text" width=85 height=25 /></a>
+      <a class="navbar-brand" href="../index.html" ><img src="resources/imagens/maju2.png" alt="some text" width=90 height=20 /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -94,13 +95,14 @@
 		  <div class="col-lg-4">
 			  <div class="base-card current-weather">
 					<button class=" -uppercase -bold -font-small {{background}} col-12" onclick="exibirIframeDante();">
-						<span style="font-size: 12px; color: white;">Tempo agora em {{localizacao}}</span>&nbsp;&nbsp;<img id="momento-icone" style="margin-top: -5px;" src="resources/imagens/google-maps.png" alt="Ícone de temperatura atual" width="20" height="20">
+						<span style="font-size: 12px; color: white;">Tempo agora em {{localizacao}}</span>&nbsp;&nbsp;<i style="color:white;" class="fa fa-map-marker"></i>
+<!-- 						<img id="momento-icone" style="margin-top: -5px;" src="resources/imagens/google-maps.png" alt="Ícone de temperatura atual" width="20" height="20"> -->
 					</button>
 					
 					<span style="height: 100px;" class="-gray -bold -font-small background">
-						<li style="font-size: 12px; color: darkslategray;"><b>{{sugUV}}</b></li>
-						<li style="font-size: 12px; color: darkslategray;"><b>{{sugTemperatura}}</b></li>
-						<li style="font-size: 12px; color: darkslategray;"><b>{{sugUmidade}}</b></li>
+						<li style="font-size: 12px; color: darkslategray;"><b>UV:</b> {{sugUV}}</li>
+						<li style="font-size: 12px; color: darkslategray;"><b>Temperatura:</b> {{sugTemperatura}}</li>
+						<li style="font-size: 12px; color: darkslategray;"><b>Umidade:</b> {{sugUmidade}}</li>
 					</span>
 						
 					
@@ -130,13 +132,13 @@
 		  	<div class="col-lg-4">
 			  <div class="base-card current-weather" data-current-weather="">
 					<button class="-uppercase -bold -font-small background-good col-12" onclick="exibirIframeMooca();">
-						<span style="font-size: 12px; color: white;">Tempo agora em Parque Mooca</span>&nbsp;&nbsp;<img id="momento-icone" style="margin-top: -5px;" src="resources/imagens/google-maps.png" alt="Ícone de temperatura atual" width="20" height="20">
+						<span style="font-size: 12px; color: white;">Tempo agora em Parque Mooca</span>&nbsp;&nbsp;<i style="color:white;" class="fa fa-map-marker"></i>
 					</button>
 					
 					<span style="height: 100px;" class="-gray -bold -font-small background">
-						<li style="font-size: 12px; color: darkslategray;"><b>Há necessidade de proteção intensa, vista uma camiseta, utilize óculos de sol, aplique filtro solar e coloque um chapéu.</b></li>
-						<li style="font-size: 12px; color: darkslategray;"><b>Fazer intervalos mais prolongados na sombra, estimular a ingestão de líquidos a cada 15 min.</b></li>
-						<li style="font-size: 12px; color: darkslategray;"><b>Umidade boa para prática de exercícios físicos.</b></li>
+						<li style="font-size: 12px; color: darkslategray;"><b>UV:</b> Não há necessidade de proteção, mas procure uma sombra nas horas próximas ao meio-dia.</li>
+						<li style="font-size: 12px; color: darkslategray;"><b>Temperatura:</b> Fazer intervalos mais prolongados na sombra, estimular a ingestão de líquidos a cada 15 min.</li>
+						<li style="font-size: 12px; color: darkslategray;"><b>Umidade:</b> Umidade boa para prática de exercícios físicos.</li>
 					</span>
 					
 					<a class="locale -blue -bold _margin-t-10 actControlModal" data-modal="geolocationSearch"></a>
@@ -148,7 +150,7 @@
 					</div>
 					<div class="temperature _flex _align-center" >
 						<span class="predictions"><i class="fa fa-tint"></i>&nbsp;<b>Umidade</b><br><span id="momento-umidade">70%</span></span>
-						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Moderado</span></span>
+						<span class="predictions"><i class="fa fa-sun-o"></i>&nbsp;<b>UV</b><br><span id="momento-pressao">Baixo </span></span>
 						<span class="predictions"><i class="fa fa-umbrella"></i>&nbsp;<b>Chuva</b><br><span id="momento-vento">Não&nbsp;</span></span>
 					</div>
 				
@@ -165,13 +167,13 @@
 		  	<div class="col-lg-4">
 			  <div class="base-card current-weather" data-current-weather="">
 					<button class="-uppercase -bold -font-small background-bad col-12" onclick="exibirIframeIbirapuera();">
-						<span style="font-size: 12px; color:white;">Tempo agora em Parque Ibirapuera</span>&nbsp;&nbsp;<img id="momento-icone" style="margin-top: -5px;" src="resources/imagens/google-maps.png" alt="Ícone de temperatura atual" width="20" height="20">
+						<span style="font-size: 12px; color:white;">Tempo agora em Parque Ibirapuera</span>&nbsp;&nbsp;<i style="color:white;" class="fa fa-map-marker"></i>
 					</button>
 					
 					<span style="height: 100px;" class="-gray -bold -font-small background">
-						<li style="font-size: 12px; color: darkslategray;"><b>Há necessidade de proteção intensa, evite se espor no sol nas horas próximas ao meio-dia. Camiseta, filtro solar, óculos e beba água.</b></li>
-						<li style="font-size: 12px; color: darkslategray;"><b>Temperatura muito alta, cancelar qualquer atividade atlética.</b></li>
-						<li style="font-size: 12px; color: darkslategray;"><b>Umidade muito baixa para prática de exercícios físicos.</b></li>
+						<li style="font-size: 12px; color: darkslategray;"><b>UV:</b> Há necessidade de proteção intensa, evite se espor no sol nas horas próximas ao meio-dia. Camiseta, filtro solar, óculos e beba água.</li>
+						<li style="font-size: 12px; color: darkslategray;"><b>Temperatura:</b> Temperatura muito alta, cancelar qualquer atividade física.</li>
+						<li style="font-size: 12px; color: darkslategray;"><b>Umidade:</b> Umidade muito baixa para prática de exercícios físicos.</li>
 					</span>
 					
 					<a class="locale -blue -bold _margin-t-10 actControlModal" data-modal="geolocationSearch"></a>
@@ -195,8 +197,34 @@
 				</div>
 		  	</div>
 		  	
-		  	
 		  </div>
+		  
+		  <!-- Page Content -->
+  <div class="container" id="content-wrap">
+  
+  	<div class="row">
+		  <div class="col-lg-4">
+		
+			<canvas id="myChart" style="height: 150px; margin-top: 130px"></canvas>
+			
+		 </div>
+		 
+		   <div class="col-lg-4">
+		
+			<canvas id="myChart2" style="height: 150px; margin-top: 130px"></canvas>
+			
+		 </div>
+		 
+		   <div class="col-lg-4">
+		
+			<canvas id="myChart3" style="height: 150px; margin-top: 130px"></canvas>
+			
+		 </div>
+		
+	</div>
+
+</div>
+	
   </div>
 
 <br>
@@ -210,14 +238,14 @@
   </footer>
   
 
-  <script src="resources/vendor/jquery/jquery.min.js"></script>
-  <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="resources/angular/angular.js"></script>
-  <script src="resources/angular/controller/help.js"></script>
-  
-
+	  <script src="resources/vendor/jquery/jquery.min.js"></script>
+	  <script src="resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	  <script src="resources/angular/angular.js"></script>
+	  <script src="resources/angular/controller/help.js"></script>
+      <script src="resources/vendor/jquery/Chart.min.js"></script>
 
 </body>
+	 
 
 </html>
 

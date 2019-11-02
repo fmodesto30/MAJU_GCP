@@ -3,6 +3,8 @@ package com.maju.backend.business.dao.impl;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.maju.backend.business.interfaces.ValoresMedidos;
 import com.maju.backend.database.connection.ConexaoJDBC;
@@ -74,6 +76,34 @@ public class TemperaturaDAOImpl {
 	        return valoresMedidos;
 	    }
 	    
+    public List<ValoresMedidos> findAllDay() throws SQLException, ClassNotFoundException {
+	    	
+    		List<ValoresMedidos> valoresMedidosList = new ArrayList();
+    		ValoresMedidos valoresMedidos = new ValoresMedidos();
+	    	
+	    	StringBuffer sql = new StringBuffer();
+	    	sql.append("SELECT * FROM DB_CLIMA WHERE CREATE_S >= '2019-10-20' ORDER BY CREATE_S DESC");
+
+	        try {
+	        	
+	        	PreparedStatement statement = this.conexao.getConnection().prepareStatement(sql.toString());
+	            ResultSet rs = statement.executeQuery();
+	            
+	            while (rs.next()) {
+	            	
+	            	while (rs.next()) {
+	            		valoresMedidosList.add(parser(rs, valoresMedidos));
+	                }
+	            	
+	            }
+
+	        } catch (SQLException e) {
+	            throw e;
+	        }
+
+	        return valoresMedidosList;
+	    }
+	    
 	    
 	    private ValoresMedidos parser(ResultSet resultSet, ValoresMedidos valoresMedidos) throws SQLException {
 	    	
@@ -84,6 +114,7 @@ public class TemperaturaDAOImpl {
 	    	valoresMedidos.setUmidade(resultSet.getString("UMIDADE"));	
 	    	valoresMedidos.setLocalizacao(resultSet.getString("LOCALIZACAO"));
 	    	valoresMedidos.setCreateS(resultSet.getTimestamp("CREATE_S"));	
+	    	valoresMedidos.setUvNumber(resultSet.getString("UV"));
 
 	        return valoresMedidos;
 	    }

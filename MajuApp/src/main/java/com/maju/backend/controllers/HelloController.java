@@ -2,6 +2,7 @@ package com.maju.backend.controllers;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -71,4 +72,15 @@ public class HelloController {
     	 return Response.ok(valoresMedidos, MediaType.APPLICATION_JSON).build();
     }
     
+    @GET
+    @Path("getAllDay")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response findAllDay() throws ClassNotFoundException, SQLException{
+    	
+    	this.temperaturaDAOImpl = new TemperaturaDAOImpl();
+    	List<ValoresMedidos> valoresMedidosList = this.temperaturaDAOImpl.findAllDay();
+    	
+    	System.err.println(valoresMedidosList.toString());
+    	 return Response.ok(valoresMedidosList, MediaType.APPLICATION_JSON).build();
+    }
 }
